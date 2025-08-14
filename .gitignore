@@ -68,6 +68,9 @@ instance/
 # Scrapy stuff:
 .scrapy
 
+# Voter list downloads
+voter_lists/
+
 # Sphinx documentation
 docs/_build/
 
