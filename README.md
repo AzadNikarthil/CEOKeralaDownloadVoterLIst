@@ -4,29 +4,28 @@ A Python script to automate the bulk download of voter lists from the Chief Elec
 
 ## Description
 
-This script allows you to download voter lists for a specific district and legislative assembly constituency from the CEO Kerala electoral rolls website: [http://webapp.ceo.kerala.gov.in/electoralrolls.html](http://webapp.ceo.kerala.gov.in/electoralrolls.html)
+This script allows you to download all voter list PDFs for a specific district and legislative assembly constituency from the CEO Kerala electoral rolls website. It works by replicating the AJAX calls made by the website, which is faster and more reliable than browser automation.
 
 ## Features
 
-*   Download voter lists for a specific district and legislative assembly.
-*   The script is designed to be easily extensible to download lists for all districts and constituencies.
+*   Downloads all voter lists for a specific district and legislative assembly.
 *   Command-line interface for ease of use.
+*   Lightweight and fast; does not require a browser.
 
 ## Requirements
 
 *   Python 3.x
 *   `requests`
-*   `beautifulsoup4`
 
-You can install the required packages using pip:
+You can install the required package using pip:
 
 ```bash
-pip install requests beautifulsoup4
+pip install requests
 ```
 
 ## Usage
 
-To download the voter list for a specific district and legislative assembly, run the script from your terminal with the required arguments.
+To download the voter lists for a specific district and legislative assembly, run the script from your terminal. The files will be saved in a `downloads` directory.
 
 ```bash
 python download_voter_list.py --district "District Name" --assembly "Assembly Name"
@@ -35,7 +34,12 @@ python download_voter_list.py --district "District Name" --assembly "Assembly Na
 For example:
 
 ```bash
-python download_voter_list.py --district "Thiruvananthapuram" --assembly "Vattiyoorkavu"
+python download_voter_list.py --district "Ernakulam" --assembly "Thripunithura"
+```
+
+You can also limit the number of files to download for testing purposes:
+```bash
+python download_voter_list.py --district "Ernakulam" --assembly "Thripunithura" --limit 2
 ```
 
 ## Disclaimer
