@@ -1,0 +1,471 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CEO Kerala :: Voters List download</title>
+
+
+
+
+
+<link rel="stylesheet" href="http://webapp.ceo.kerala.gov.in:80/styles/ceostyles_min_3.css?0110.18" type="text/css"/>
+<link rel="stylesheet" href="http://webapp.ceo.kerala.gov.in:80/assets/css/font-awesome.min.css">
+<script src="http://webapp.ceo.kerala.gov.in:80/scripts/jquery-1.4.2.min.js"> </script>
+<script>
+function normalFontSize(){
+	defaultFontSize =  12 + "px";
+	$("body").css('font-size', defaultFontSize);
+}
+
+function normalContrast(){
+	$(".wrapper").addClass("normal_mode");
+	$(".wrapper").removeClass("negative");
+	$(".wrapper").removeClass("black_white");
+}
+	function bwClick(){
+		$(".wrapper").addClass("black_white");
+		$(".wrapper").removeClass("negative");
+		$(".wrapper").removeClass("normal_mode");
+		$(".wrapper").removeClass("3333");
+	}
+	function contrastClick(){
+		$(".wrapper").addClass("2222");
+	}
+
+	function inverseClick(){
+		$(".wrapper").addClass("negative");
+		$(".wrapper").removeClass("black_white");
+		$(".wrapper").removeClass("normal_mode");
+	}
+
+// 	Font size enlarge
+	function changeFontSize(target) {
+
+		  var demo = document.getElementById("demo");
+		  var computedStyle = window.getComputedStyle
+		        ? getComputedStyle(demo) // Standards
+		        : demo.currentStyle;     // Old IE
+
+		  var fontSize;
+		  var minSize = parseFloat("10");
+		  var maxSize = parseFloat("22");
+
+		  if (computedStyle) { // This will be true on nearly all browsers
+		      fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+
+		      if (target == document.getElementById("button1")) {
+			      if(fontSize < maxSize){
+				  fontSize += 2;
+			      }else{
+				  fontSize = maxSize;
+			      }
+		        //fontSize += 2;
+		      } else if (target == document.getElementById("button2")) {
+			  if(fontSize > minSize){
+				  fontSize -= 2;
+			      }else{
+				  fontSize = minSize;
+			      }
+		        //fontSize -= 2;
+		      }
+		      $("body").css('font-size', fontSize + "px");
+		  }
+		}
+
+</script>
+
+
+	<link rel="stylesheet" href="http://webapp.ceo.kerala.gov.in:80/styles/en.css?0110.18" type="text/css"/>
+
+
+
+
+
+</head>
+<body class="wrapper" id="demo">
+<div class="new_header">
+<div class="container">
+<ul>
+	<li class="cls_1" style="width: 166px;float: left;margin-top: -3px;"><a href="#content_area">Skip to main content <img src="http://webapp.ceo.kerala.gov.in:80/images/img7.png" alt="img"/></a></li>
+	<li class="cls_3"><a style="font-size: 14px !important;" title="Decrease Font Size" href="#" id="button2" onclick="changeFontSize(this)"><img src="http://webapp.ceo.kerala.gov.in:80/images/img1.png" alt="img"/></a></li>
+	<li class="cls_3"><a class="resetFont" style="font-size: 14px !important;" title="Normal Font Size" href="#" id="button3" onclick="normalFontSize()"><img src="http://webapp.ceo.kerala.gov.in:80/images/img2.png" alt="img"/></a></li>
+	<li class="cls_2"><a style="font-size: 14px !important;" title="Increase Font Size" href="#" id="button1" onclick="changeFontSize(this)"><img src="http://webapp.ceo.kerala.gov.in:80/images/img3.png" alt="img"/></a></li>
+</ul>
+<ul class="filter-right float-right">
+	<li class="cls_1" style="width: 166px;float: left;margin-top: 1px;"><a href="http://webapp.ceo.kerala.gov.in:80/screenreaderaccess.html">Screen Reader Access</a></li>
+	<li class="cls_4"><a style="font-size: 14px !important;" title="Normal Contrast" onclick="normalContrast();" href="#"><img src="http://webapp.ceo.kerala.gov.in:80/images/img4.png" alt="img"/></a></li>
+	<li class="cls_5"><a style="font-size: 14px !important;" title="Black & White" onclick="bwClick();" href="#"><img src="http://webapp.ceo.kerala.gov.in:80/images/img5.png" alt="img"/></a></li>
+	<li class="cls_6"><a style="font-size: 14px !important;" title="High contrast" onclick="inverseClick();" href="#"><img src="http://webapp.ceo.kerala.gov.in:80/images/img6.png" alt="img"/></a></li>
+</ul>
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="http://webapp.ceo.kerala.gov.in:80/scripts/iepngfix_tilebg.js"></script>
+<style type="text/css">
+.election-logo{ behavior: url(http://webapp.ceo.kerala.gov.in:80/images/iepngfix.htc) }
+.home-icon-image{ behavior: url(http://webapp.ceo.kerala.gov.in:80/images/iepngfix.htc) }
+</style>
+<![endif]-->
+
+<div id="menu-nav">
+	<a class="election-link" href="http://webapp.ceo.kerala.gov.in:80/home.html"><label
+		class="eci-india-kerala election-logo"
+	></label>
+		<h2>
+			Chief Electoral Officer, Kerala
+		</h2> </a>
+	<p style="float: right; margin-top: 45px; margin-right: 10px;">
+
+
+
+
+		<a href="?lang=en">English</a>
+		&nbsp;|&nbsp; <a href="?lang=ml">മലയാളം</a>
+	</p>
+
+
+	<div id="top-li">
+	<ul>
+		<li>
+			<a  href="http://webapp.ceo.kerala.gov.in:80/eregistration.html">
+			E-registration</a>
+		</li>
+
+		<li> <a  href="http://webapp.ceo.kerala.gov.in:80/stateprofile.html">
+		State Profile</a>
+		</li>
+
+		<li> <a href="http://webapp.ceo.kerala.gov.in:80/electoralrolls.html">
+		Electoral Roll</a>
+		</li>
+
+
+		<li>
+
+		<a target="_blank" href="https://electoralsearch.in">
+		Electoral Roll Search</a>
+		</li>
+
+	</ul>
+</div>
+	<br clear="all" />
+	<ul class="election-image-repeat-x menu-nav-repeat">
+		<!-- <li><span class="eci-india-kerala left-top-menu"></span></li> -->
+
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/home.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/aboutus.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/contactus.html"><i class="fa fa-map-marker" aria-hidden="true"></i>
+		Contact Us</a></li>
+
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/electionhistory.html"><i class="fa fa-history" aria-hidden="true"></i>
+	Election History</a></li>
+
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/phonenumbers.html"><i class="fa fa-phone" aria-hidden="true"></i>
+		Telephone Nos</a></li>
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/electedmembers.html"><i class="fa fa-user" aria-hidden="true"></i>
+		Elected Members</a></li>
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/riact.html"><i class="fa fa-file-text" aria-hidden="true"></i>
+		RTI Act</a></li>
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/mcc.html"><i class="fa fa-book" aria-hidden="true"></i>
+
+		MCC</a></li>
+		<!--
+		<li><a href="http://webapp.ceo.kerala.gov.in:80/polldayreports.html"><i class="fa fa-book" aria-hidden="true"></i>
+
+		Poll Day Reports	</a></li>
+		-->
+	</ul>
+	<span class="eci-india-kerala right-top-menu"></span>
+</div>
+
+</div>
+</div>
+
+ <div id="mainPan">
+ <div id="header">
+
+
+	<img src="http://webapp.ceo.kerala.gov.in:80/images/election-inner.jpg" width="982" height="61"/>
+	<span class="page-name page-name-" >
+        <label class="eci-india-kerala page-name-left"></label>
+             <h4>Voters List download</h4>
+        <label class="eci-india-kerala page-name-right"></label>
+     </span>
+
+ </div>
+ <div id="leftmenu-sidebar">
+ <!-- WCAG - Feb 2019 : Accessibility fixed JSP file -->
+<div id="leftmenu">
+	<span class="eci-india-kerala election-image"></span>
+	<ul class="menu-list-items" style="clear:both;">
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/ceodesk.html">CEO's Desk</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/orgchart.html">Organisation Chart</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/districts.html">District/Constituencies</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/maps.html">Maps</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/Blo_EPatrika.html">E-Patrika</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/forms.html">Forms</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/handbooks.html">Handbooks</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/downloads.html">Downloads</a>
+		</li>
+		 <li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/erollArchives.html">Electoral Roll Archives</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/reports.html">Reports</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/blobla.html">BLO</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/evm.html">Electronic Voting Machine</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/faq.html">FAQ</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/photogallery.html">Photo Gallery</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/delimitation.html">Delimitation</a>
+		</li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/pollingstations.html">Polling Stations</a>
+		</li>
+
+		<!--
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/pdf/POLITICAL PARTIES/pp.pdf"
+				target="_blank"
+			>List of Political Parties</a>
+		</li>
+
+		<li>
+		<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/politicalparties.html">List of Political Parties</a>
+		</li>
+		-->
+		  <li>
+                <span class="eci-india-kerala list-menu-item"></span>
+                        <a href=" https://eci.gov.in/candidate-political-parties/list-of-political-parties/" target="_blank">
+			List of Political Parties</a>
+                </li>
+
+		<li>
+                        <span class="eci-india-kerala list-menu-item"></span>
+                        <a href="http://webapp.ceo.kerala.gov.in:80/eciInstructionsMCC.html"
+                        >Model Code of Conduct</a>
+                </li>
+		<li>
+			<span class="eci-india-kerala list-menu-item"></span>
+			<a href="http://webapp.ceo.kerala.gov.in:80/abbreviationsused.html">Abbreviations Used</a>
+		</li>
+
+	</ul>
+	<div class="leftmenu-links" style="clear:both;">
+		<div class="float-left">
+			<span class="site-links">
+			<label class="eci-india-kerala india-image"></label>
+			<a href="http://india.gov.in/" target="_blank">Government of India</a></span>
+				<span class="site-links">
+			<label class="eci-india-kerala kerala-image"></label>
+			<a href="http://www.kerala.gov.in/" target="_blank">Government of Kerala</a></span> <span class="site-links">
+			<label class="eci-india-kerala eci-image"></label>
+			<a href="https://eci.gov.in" style="width:148px;" target="_blank">Election Commission of India</a></span>
+		</div>
+		<div class="activelinks">
+
+			<a href="http://webapp.ceo.kerala.gov.in:80/electorateoveryears.html">Electorate - Over Years</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2019.html">Lok Sabha Election 2019</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/byeElectionOct2019.html">Assembly Bye Election Oct-2019</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election093.html">Assembly Bye Election Sep-2019</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election110.html">Assembly Bye Election 2018</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election041.html ">Assembly Bye Election 2017</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2016.html">Assembly Election 2016</a><br clear="all" />
+
+		<!--
+			<a href="http://webapp.ceo.kerala.gov.in:80/electorateoveryears.html">Electorate - Over Years</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election110.html">Assembly Bye Election 2018</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election041.html">Assembly Bye Election 2017</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election06hpc.html">Lok Sabha Bye Election 2017</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2016.html">Assembly Election 2016</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2014.html">Lok Sabha Election 2014</a><br clear="all" />
+
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2011.html">General Election 2011 </a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/bye-election136.html">Bye Election 2015</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/loksabha-elections.html">Lok Sabha Election 2009</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/generalelection2014.html">Lok Sabha Election 2014</a><br clear="all" />
+			<a href="http://webapp.ceo.kerala.gov.in:80/kla.html">Assembly Elections 2006</a><br clear="all" />
+		-->
+
+		</div>
+	</div>
+	<div style="padding: 5px 0;clear:both;">
+		<div class="eci-india-kerala toll-free-number"><span style="font-size:0px;">Call tollfree 1950</span></div>
+			<br clear="all" />
+		<div style="color: green;margin: 5px 0;">
+			From <b>10.00 AM</b> to <b>05.00 PM</b> on all working days
+		</div>
+	</div>
+			<!--  <div style="padding: 5px 0;clear:both;"> <a href="https://www.facebook.com/CEOKeralaOffice" target="_blank">
+			<img alt="FACEBOOK" src="http://webapp.ceo.kerala.gov.in:80/images/CEO_NEW_PHOTO0001.jpg"  width="60" height="40">
+			</a>
+			<a href="https://youtube.com/@ChiefElectoralOfficerKerala" target="_blank">
+			<img alt="YOUTUBE" src="http://webapp.ceo.kerala.gov.in:80/images/call-tab-bak.png"  width="60" height="40">
+			</a>
+			<a href="https://twitter.com/Ceokerala" target="_blank">
+			<img alt="TWITTER" src="http://webapp.ceo.kerala.gov.in:80/images/call-tab-old.png"  width="60" height="40">
+			</a>
+			</div> -->
+
+</div>
+
+  </div>
+
+      <div id="content_area" class="content inner-width">
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://webapp.ceo.kerala.gov.in:80/scripts/jquery-1.4.2.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+	function recaptchaCallback(){
+		 $('.captchaMsg').remove();
+		 $('.button-row').html(" ");
+		 $('.button-row').html("<input tabindex='2'	id='downloadRollPdf' value='Download' type='button' style='cursor: pointer;' onclick='downloadFile();'>");
+	}
+
+	function downloadFile(){
+		if (grecaptcha.getResponse().length > 0) {
+			window.location.replace($("#pdfFileUrlId").val());
+		}else
+			if (grecaptcha.getResponse().length == 0) {
+				$('.button-row').html(" ");
+				$('.button-row').html("<label class='captchaMsg' style='font-weight: bold;color: red;'>Please verify the 'Captcha' to download Electoral Roll !!!</label>");
+			}
+	}
+</script>
+
+
+<h4 class="title">
+	Download Electoral Roll...
+</h4>
+
+<form method="post" id="eRollDownloadFormId" action="http://webapp.ceo.kerala.gov.in/pdf/voterslist/2023/FINAL/ML/AC003/S11A3P2.pdf?download=hDRUyTxjNGnLewxtdEfHyg%3D%3D">
+
+	<input type="hidden" name="pdfFileUrl" id="pdfFileUrlId" value="http://webapp.ceo.kerala.gov.in/pdf/voterslist/2023/FINAL/ML/AC003/S11A3P2.pdf?download=hDRUyTxjNGnLewxtdEfHyg%3D%3D" />
+
+	<table class="arc"
+		summary='This is a table containing details for downloading electrol roll	'>
+		<tbody>
+			<tr>
+				<th scope="row">District</th>
+				<td>KASARAGOD</td>
+			</tr>
+			<tr>
+				<th scope="row">Legislative Assembly Constituency</th>
+				<td>UDMA</td>
+
+			</tr>
+			<tr>
+				<th scope="row">Polling Station & Booth No</th>
+				<td>2-Govt.U.P School Chemmanad West (South Building East Portion)</td>
+			</tr>
+
+			<tr>
+				<th scope="row">Captcha</th>
+				<td>
+
+					<div class="g-recaptcha" data-callback="recaptchaCallback" tabindex="1"	data-sitekey="6LderAMTAAAAACZWcMs2xjaALB_qP3epSdHhW-AD"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center; height: 27px;" class="button-row">
+
+				  <label class="captchaMsg" style="font-weight: bold;color: #0020cc;">Please verify the 'Captcha' to download Electoral Roll !!!</label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</form>
+
+
+	 </div>
+<br clear="all"/>
+
+     <div id="footer">
+ <a href="http://webapp.ceo.kerala.gov.in:80/aboutus.html">About Us</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/contactus.html">Contact Us</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/eregistration.html">E-registration</a>
+
+<a href="http://webapp.ceo.kerala.gov.in:80/electionhistory.html">Election History</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/phonenumbers.html">Telephone Nos</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/electedmembers.html">Elected Members</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/riact.html">RTI Act</a>
+<a href="http://webapp.ceo.kerala.gov.in:80/mcc.html">MCC</a>
+		<div style="padding: 10px 0;clear:both;" > <a href="https://www.facebook.com/CEOKeralaOffice" target="_blank">
+			<img alt="FACEBOOK" src="http://webapp.ceo.kerala.gov.in:80/images/CEO_NEW_PHOTO0001.png"  width="25" height="25">
+			</a>
+			<a href="https://youtube.com/@ChiefElectoralOfficerKerala" target="_blank">
+			<img alt="YOUTUBE" src="http://webapp.ceo.kerala.gov.in:80/images/call-tab-bak.png"  width="25" height="25">
+			</a>
+			<a href="https://twitter.com/Ceokerala" target="_blank">
+			<img alt="TWITTER" src="http://webapp.ceo.kerala.gov.in:80/images/call-tab-old.png"  width="25" height="25">
+			</a>
+			</div>
+     </div><br clear="all"/>
+</div>
+
+
+</body>
+
+</html>
