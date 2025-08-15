@@ -130,6 +130,7 @@ CONSTITUENCIES_DATA = {
 BASE_URL = "http://webapp.ceo.kerala.gov.in/electoralroll/partsListAjax.html"
 DOWNLOAD_BASE_DIR = "voter_lists"
 HREF_REGEX = re.compile(r'href=[\'"]?([^\'" >]+)')
+PDF_URL_REGEX = re.compile(r'id="pdfFileUrlId"\s+value="([^"]+)"')
 
 def download_pdf(url, folder, filename):
     """Downloads a PDF from a URL and saves it to a specified folder."""
@@ -178,13 +179,32 @@ def fetch_and_download_voter_lists(district_id, district_name, constituency_id, 
             polling_station_name = station_data[1]
             final_roll_html = station_data[3]
 
-            match = HREF_REGEX.search(final_roll_html)
-            if match:
-                pdf_url = match.group(1)
-                safe_filename = "".join(c for c in polling_station_name if c.isalnum() or c in (' ', '_')).rstrip()
-                pdf_filename = f"{safe_filename}.pdf"
-                download_folder = os.path.join(DOWNLOAD_BASE_DIR, district_name, constituency_name)
-                download_pdf(pdf_url, download_folder, pdf_filename)
+            href_match = HREF_REGEX.search(final_roll_html)
+            if href_match:
+                captcha_page_url = href_match.group(1)
+
+                try:
+                    # Step 1: Go to the captcha page
+                    captcha_page_response = requests.get(captcha_page_url)
+                    captcha_page_response.raise_for_status()
+
+                    # Step 2: Extract the final PDF URL from the captcha page
+                    pdf_url_match = PDF_URL_REGEX.search(captcha_page_response.text)
+
+                    if pdf_url_match:
+                        final_pdf_url = pdf_url_match.group(1)
+                        safe_filename = "".join(c for c in polling_station_name if c.isalnum() or c in (' ', '_')).rstrip()
+                        pdf_filename = f"{safe_filename}.pdf"
+                        download_folder = os.path.join(DOWNLOAD_BASE_DIR, district_name, constituency_name)
+
+                        # Step 3: Download the actual PDF
+                        download_pdf(final_pdf_url, download_folder, pdf_filename)
+                    else:
+                        print(f"    Could not find final PDF URL for {polling_station_name}")
+
+                except requests.exceptions.RequestException as e:
+                    print(f"    Error fetching captcha page for {polling_station_name}: {e}")
+
             else:
                 print(f"    Could not find download link for {polling_station_name}")
 
