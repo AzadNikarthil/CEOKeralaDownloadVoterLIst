@@ -161,6 +161,7 @@ def fetch_and_download_voter_lists(district_id, district_name, constituency_id, 
         "currentYear": "2023",
         "distNo": district_id,
         "lacNo": constituency_id,
+        "iDisplayLength": "10000", # Request all records to bypass pagination
     }
 
     try:
@@ -215,53 +216,30 @@ def fetch_and_download_voter_lists(district_id, district_name, constituency_id, 
 
 def main():
     """
-    Main function to guide the user and download voter lists.
+    Main function to iterate through all districts and constituencies and download voter lists.
     """
-    print("Starting voter list download script...")
+    print("Starting automated voter list download script...")
 
-    # --- District Selection ---
-    print("\nPlease select a district:")
-    # Sort districts by ID for consistent ordering
+    # Iterate through all districts, sorted by ID for consistent order
     sorted_districts = sorted(DISTRICTS_DATA.items(), key=lambda item: int(item[0]))
     for district_id, district_name in sorted_districts:
-        print(f"  {district_id}. {district_name}")
+        print(f"\n--- Processing District: {district_name} ---")
 
-    district_choice = ""
-    while district_choice not in DISTRICTS_DATA:
-        district_choice = input("Enter the number of the district: ").strip()
-        if district_choice not in DISTRICTS_DATA:
-            print("Invalid selection. Please try again.")
+        if district_id not in CONSTITUENCIES_DATA:
+            print(f"    No constituencies found for {district_name}")
+            continue
 
-    selected_district_id = district_choice
-    selected_district_name = DISTRICTS_DATA[selected_district_id]
+        # Iterate through all constituencies in the district
+        for constituency in CONSTITUENCIES_DATA[district_id]:
+            constituency_id = constituency['id']
+            constituency_name = constituency['name']
 
-    # --- Constituency Selection ---
-    print(f"\nPlease select a constituency for {selected_district_name}:")
-    constituencies = CONSTITUENCIES_DATA[selected_district_id]
-
-    # Create a mapping from choice number to constituency ID
-    constituency_map = {}
-    for i, constituency in enumerate(constituencies, 1):
-        print(f"  {i}. {constituency['name']} (ID: {constituency['id']})")
-        constituency_map[str(i)] = constituency
-
-    constituency_choice = ""
-    while constituency_choice not in constituency_map:
-        constituency_choice = input("Enter the number of the constituency: ").strip()
-        if constituency_choice not in constituency_map:
-            print("Invalid selection. Please try again.")
-
-    selected_constituency = constituency_map[constituency_choice]
-    selected_constituency_id = selected_constituency['id']
-    selected_constituency_name = selected_constituency['name']
-
-    # --- Download ---
-    fetch_and_download_voter_lists(
-        selected_district_id,
-        selected_district_name,
-        selected_constituency_id,
-        selected_constituency_name
-    )
+            fetch_and_download_voter_lists(
+                district_id,
+                district_name,
+                constituency_id,
+                constituency_name
+            )
 
     print("\nScript finished.")
 
