@@ -1,3 +1,4 @@
+requests
 pytesseract
 pdf2image
 psycopg2-binary
